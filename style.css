@@ -1,0 +1,296 @@
+.video {
+  position: absolute;
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 115px;
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  padding: 0 80px;
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+  font-family: 'Poly', serif;
+}
+
+/* PIANO 제목 */
+.logo {
+  font-size: 64px;
+  font-weight: bold;
+  color: #C5AC74;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 왼쪽 메뉴 그룹 */
+.menu-group {
+  display: flex;
+  gap: 180px;
+}
+
+.menu-group div a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-group div a:hover {
+  color: #C5AC74;
+}
+
+/* "MUSIC IS MY LIFE" 강조 스타일 */
+.highlight a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 100;
+  border: 2px solid #C5AC74;
+  padding: 5px 15px;
+}
+
+.highlight a:hover {
+  background-color: #C5AC74;
+  color: black;
+}
+
+.music-display {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 노래 제목 스타일 */
+.song-title {
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 10px #C5AC74, 0 0 20px #C5AC74, 0 0 30px #C5AC74;
+  margin-bottom: 20px;
+}
+
+/* 악보 영역 스타일 */
+.sheet-music {
+  width: 880px;
+  height: 360px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-image: url('악보 이미지 경로'); /* 악보 이미지를 여기에 삽입 */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.wrapper {
+  position: absolute;
+  top: 885px;
+  background: #ffffff;
+  box-shadow: 0 0 20px #3a3a3a;
+  font-family: 'Poly', serif;
+  width: 100%;
+  height: 400px;
+  background-color: #181818;
+}
+.wrapper header {
+  display: flex;
+  color: #B2B2B2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.album-info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 80px;
+  color: white;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.album-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.artist-name,
+.album-name {
+  font-size: 24px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.controls {
+  position: absolute;
+  margin-top: 130px;
+  right: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 100px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* 볼륨 슬라이더 스타일 */
+.volume-slider input {
+  accent-color: #ffe277;
+  width: 150px;
+}
+
+/* 쇼 키 스타일 */
+.keys-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.keys-checkbox span {
+  color: #ffffff;
+}
+
+.keys-checkbox input {
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #333333;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #666;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #666;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 70px;
+  background: radial-gradient(#ffe17d, #ffcd69, #414141, #333333);
+}
+.piano-keys {
+  display: flex;
+  list-style: none;
+  margin-top: 100px;
+  margin-left: 35%;
+}
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+  background:linear-gradient(to bottom, #000, #434343);
+}
+.piano-keys .white {
+  height: 235px;
+  width: 75px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #A2A2A2;
+  font-size: 1.13rem;
+  text-align: center;
+}
+.piano-keys .key.hide span {
+  display: none;
+}
+.piano-keys .black span {
+  bottom: 13px;
+  color: #888888;
+}
+
+@media screen and (max-width: 815px) {
+  .wrapper {
+    padding: 25px;
+  }
+  header {
+    flex-direction: column;
+  }
+  header :where(h2, .column) {
+    margin-bottom: 13px;
+  }
+  .volume-slider input {
+    max-width: 100px;
+  }
+  .piano-keys {
+    margin-top: 20px;
+  }
+  .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+    display: none;
+  }
+  .piano-keys .black {
+    height: 100px;
+    width: 40px;
+    margin: 0 -20px 0 -20px;
+  }
+  .piano-keys .white {
+    height: 180px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .piano-keys .key:nth-child(13),
+  .piano-keys .key:nth-child(14),
+  .piano-keys .key:nth-child(15),
+  .piano-keys .key:nth-child(16),
+  .piano-keys .key :nth-child(17) {
+    display: none;
+  }
+  .piano-keys .white {
+    width: 50px;
+  }
+}

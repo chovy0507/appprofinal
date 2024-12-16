@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>CLASSIC</title>
+
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Owl Carousel Load -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">PIANO</div>
+      <div class="menu-group">
+          <div><a href="index.html">HOME</a></div>
+          <div><a href="KPOP.html">K-POP</a></div>
+          <div><a href="ballad.html">BALLAD</a></div>
+          <div><a href="classic.html">CLASSIC</a></div>
+          <div><a href="video.html">VIDEO</a></div>
+      </div>
+      <div class="highlight">
+          <a href="#">MUSIC IS MY LIFE</a>
+      </div>
+  </div>
+  <div class="music-display">
+    <h1 class="song-title">PRACTICE VIDEO</h1>
+    <div class="owl-carousel">
+      <div class="item"> <iframe width="860" height="400" src="https://www.youtube.com/embed/peJS16rjZVs?si=QYSGJeeHJbvh4w8R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+      <div class="item"> <iframe width="860" height="400" src="https://www.youtube.com/embed/yL1cz826QeY?si=0QVgtGtV6Hn1UI9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+      <div class="item"> <iframe width="860" height="400" src="https://www.youtube.com/embed/v92DtHWimbo?si=eRM4maftH4A2psOH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+      <div class="item"> <iframe width="860" height="400" src="https://www.youtube.com/embed/XUzwdBQDzxw?si=VmdBbyBpVpTVHxB2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+      <div class="item"> <iframe width="860" height="400" src="https://www.youtube.com/embed/rA_2B7Yj4QE?si=CEpdwAbcpvNwm5tV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </div>
+    </div>
+</div>
+<div class="music-player">
+</div>
+    <div class="wrapper">
+      <div class="album-info">
+        <img class="album-cover" src="images/practice.png" alt="Album Cover">
+        <div class="album-details">
+            <h3 class="song-title2">PRACTICE </h3>
+            <p class="artist-name">video</p>
+            <p class="album-name">goodluck</p>
+        </div>
+    </div>
+      <div class="controls">
+        <div class="column keys-checkbox">
+            <span>Show Keys</span>
+            <input type="checkbox" checked>
+        </div>
+        <div class="column volume-slider">
+            <span>Volume</span>
+            <input type="range" min="0" max="1" value="0.5" step="any">
+        </div>
+    </div>
+        
+      <ul class="piano-keys">
+        <li class="key white" data-key="a"><span>a</span></li>
+        <li class="key black" data-key="w"><span>w</span></li>
+        <li class="key white" data-key="s"><span>s</span></li>
+        <li class="key black" data-key="e"><span>e</span></li>
+        <li class="key white" data-key="d"><span>d</span></li>
+        <li class="key white" data-key="f"><span>f</span></li>
+        <li class="key black" data-key="t"><span>t</span></li>
+        <li class="key white" data-key="g"><span>g</span></li>
+        <li class="key black" data-key="y"><span>y</span></li>
+        <li class="key white" data-key="h"><span>h</span></li>
+        <li class="key black" data-key="u"><span>u</span></li>
+        <li class="key white" data-key="j"><span>j</span></li>
+        <li class="key white" data-key="k"><span>k</span></li>
+        <li class="key black" data-key="o"><span>o</span></li>
+        <li class="key white" data-key="l"><span>l</span></li>
+        <li class="key black" data-key="p"><span>p</span></li>
+        <li class="key white" data-key=";"><span>;</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,8 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: black; /* 배경 검정 */
+}
+
 .video {
   position: absolute;
   position: fixed;
   z-index: -2;
   width: 100%;
+  height: 1080px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -11,11 +20,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 115px;
+  height: 100px;
   background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  padding: 0 80px;
+  padding: 0 40px;
   box-sizing: border-box;
-  color: white;
   position: relative;
   font-family: 'Poly', serif;
 }
@@ -31,13 +39,13 @@
 /* 왼쪽 메뉴 그룹 */
 .menu-group {
   display: flex;
-  gap: 180px;
+  gap: 150px;
 }
 
 .menu-group div a {
   text-decoration: none;
   color: white;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -50,7 +58,7 @@
 .highlight a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 100;
   border: 2px solid #C5AC74;
   padding: 5px 15px;
@@ -62,7 +70,10 @@
 }
 
 .music-display {
-  margin-top: 120px;
+  width: 860px;
+  height: 450px;
+  margin-top: 50px;
+  margin-left: 28%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,29 +86,88 @@
   color: white;
   text-shadow: 0 0 10px #C5AC74, 0 0 20px #C5AC74, 0 0 30px #C5AC74;
   margin-bottom: 20px;
+  font-family: 'Poly', serif;
 }
 
-/* 악보 영역 스타일 */
-.sheet-music {
-  width: 880px;
-  height: 360px;
-  background-color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-image: url('악보 이미지 경로'); /* 악보 이미지를 여기에 삽입 */
-  background-size: cover;
-  background-position: center;
+/* Owl Carousel 컨테이너 크기 지정 */
+.owl-carousel {
+  margin: 0 auto; /* 슬라이드 컨테이너를 화면 가운데 정렬 */
+  overflow: hidden; /* 슬라이드가 컨테이너 밖으로 넘치지 않도록 설정 */
+}
+
+/* 각 슬라이드 아이템의 크기 지정 */
+.owl-item {
+  width: 860px; /* 슬라이드 아이템 너비 */
+  height: 400px; /* 슬라이드 아이템 높이 */
+}
+
+/* 슬라이드 내부 콘텐츠 스타일 */
+.owl-item .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* 슬라이드 크기만큼 채우기 */
+  height: 100%;
+  background-color: #f5f5f5; /* 임시 배경색 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 슬라이드에 그림자 추가 */
+}
+
+/* 슬라이드 내부 이미지가 있을 경우 */
+.owl-item img {
+  width: 100%; /* 슬라이드 크기에 맞게 이미지 조정 */
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 및 크기 조정 */
+}
+
+.sheet {
+  width: 500px; /* 슬라이드 크기에 맞게 이미지 조정 */
+  height: 200px;
+}
+
+/* MP3 재생바 스타일 */
+.music-player {
+  display: flex;
+  margin-bottom: 60px; /* 악보와의 간격 */
+  margin-left: 20px;
+}
+
+.music-player audio {
+  width: 300px; /* 재생바 너비 */
+  height: 40px;
+}
+
+/* 버튼 스타일 - 크롬, 엣지 등 대부분의 브라우저에서 적용 */
+.music-player audio::-webkit-media-controls-panel {
+  background: transparent; /* 투명 배경 */
+}
+
+.music-player audio::-webkit-media-controls-play-button,
+.music-player audio::-webkit-media-controls-pause-button {
+  background-color: #C5AC74; /* 골드 배경 */
+  border: 2px solid #C5AC74; /* 골드 테두리 */
+  border-radius: 50%; /* 둥근 버튼 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 버튼에 그림자 */
+}
+
+.music-player audio::-webkit-media-controls-play-button:hover,
+.music-player audio::-webkit-media-controls-pause-button:hover {
+  background-color: #d9b05b; /* 더 밝은 골드로 변경 */
+}
+
+/* 볼륨 슬라이더의 스타일 */
+.music-player audio::-webkit-media-controls-volume-slider {
+  accent-color: #C5AC74; /* 슬라이더 색상 */
 }
 
 
 .wrapper {
   position: absolute;
-  top: 885px;
+  top: 650px;
   background: #ffffff;
   box-shadow: 0 0 20px #3a3a3a;
   font-family: 'Poly', serif;
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-color: #181818;
 }
 .wrapper header {
@@ -111,7 +181,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 20px;
   margin-left: 80px;
   color: white;
 }
@@ -133,20 +203,22 @@
 .song-title2 {
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom:0px;
 }
 
-.artist-name,
-.album-name {
+.artist-name {
   font-size: 24px;
-  margin: 5px 0;
-  opacity: 0.8;
+  color: #BFB08E;
+
+}
+.album-name {
+  font-size: 16px
 }
 
 .controls {
   position: absolute;
-  margin-top: 130px;
-  right: 400px;
+  margin-top: 80px;
+  right: 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -165,7 +237,7 @@
 .keys-checkbox {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .keys-checkbox span {
@@ -204,8 +276,8 @@
 .piano-keys {
   display: flex;
   list-style: none;
-  margin-top: 100px;
-  margin-left: 35%;
+  margin-top: 40px;
+  margin-left: 28%;
 }
 .piano-keys .key {
   cursor: pointer;
